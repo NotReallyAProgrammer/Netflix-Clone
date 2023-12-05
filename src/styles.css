@@ -1,1 +1,163 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* RESET */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* VARIABLES */
+:root {
+  /* fonts */
+  --FF: "Roboto", Arial, sans-serif;
+  --FS: clamp(1.25rem, 10%, 1.5rem);
+  --FS-HEADING: clamp(2rem, 1.5555555555555556rem + 2.2222222222222223vw, 3rem);
+  --FS-HERO-P: clamp(
+    1.125rem,
+    0.9583333333333334rem + 0.8333333333333334vw,
+    1.5rem
+  );
+
+  /* color */
+  --BODY-BG-COLOR: #000000;
+  --FONT-COLOR: #fff;
+  --MAIN-COLOR: #e50914;
+  --MAIN-COLOR-DARK: hsla(357, 92%, 47%, 0.801);
+  --LINKS-COLOR: rgba(255, 255, 255, 0.7);
+  --DIVIDER-COLOR: #232323;
+  --INPUT-BORDER-COLOR: rgba(255, 255, 255, 0.7);
+
+  /* padding */
+  --PADDING-INLINE: 25px;
+  --PADDING-FOOTER: 32px;
+  --PADDING-BLOCK-SM: 56px;
+  --PADDING-BLOCK-L: 72px;
+
+  /* BORDER-RADIUS */
+  --BORDER-RADIUS: 4px;
+}
+
+/* UTILITY CLASS */
+
+.offscreen {
+  position: absolute;
+  left: -100000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  background-color: var(--MAIN-COLOR);
+  color: var(--FONT-COLOR);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 14px;
+}
+
+.button:hover {
+  background-color: var(--MAIN-COLOR-DARK);
+}
+
+.xl-max-width {
+  max-width: 1280px;
+}
+
+.select-languages {
+  border: 1px solid gray;
+  padding: 8px 36px;
+
+  background-color: var(--BODY-BG-COLOR);
+  color: var(--FONT-COLOR);
+  border-radius: 4px;
+  font-weight: 14px;
+}
+
+.border {
+  height: 8px;
+  background-color: var(--DIVIDER-COLOR);
+}
+
+.input-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+}
+
+.general-input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--INPUT-BORDER-COLOR);
+  border-radius: 5px;
+  padding: 16px 20px 0px 20px;
+
+  font-size: 16px;
+
+  background: transparent;
+
+  color: #ffffff;
+}
+
+.floating-label {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  font-size: 16px;
+  cursor: text;
+  color: #8c8c8c;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease,
+    -webkit-transform 0.1s ease, -moz-transform 0.1s ease,
+    -o-transform 0.1s ease;
+}
+
+input:focus ~ .floating-label {
+  font-size: 11px;
+  top: 7px;
+}
+
+.label-valid {
+  font-size: 11px;
+  top: 7px;
+}
+
+/* GENERAL */
+
+html {
+  font-family: var(--FF);
+}
+
+body {
+  background-color: var(--BODY-BG-COLOR);
+  min-height: 100vh;
+  color: var(--FONT-COLOR);
+  font-size: 62.5%;
+}
+
+p {
+  line-height: 1.5;
+}

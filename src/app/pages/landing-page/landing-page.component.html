@@ -1,0 +1,258 @@
+<section class="hero">
+  <div class="hero__wrapper">
+    <figure class="hero__background">
+      <img
+        src="../../../assets/Netflix2000x1125.jpg"
+        alt="Netflix Background"
+        width="2000"
+        height="1125"
+        loading="lazy"
+      />
+      <figcaption class="offscreen">Netflix Background Img</figcaption>
+    </figure>
+    <div class="hero__typography center xl-max-witdh">
+      <h1>Enjoy big movies, hit series and more from ₱149.</h1>
+      <p>Join today. Cancel anytime.</p>
+      <p>
+        Ready to watch? Enter your email to create or restart your membership
+      </p>
+    </div>
+
+    <form #e="ngForm" action="" class="hero__newsletter">
+      <div class="input-container">
+        <input
+          type="email"
+          title="email"
+          class="general-input"
+          name="emailAddress"
+          ngModel
+          #emailAddress="ngModel"
+          required
+          [ngClass]="{
+            'email-invalid': emailAddress.touched && emailAddress.invalid
+          }"
+        />
+        <!-- VALIDATION -->
+        <div *ngIf="emailAddress.errors?.required">
+          <div
+            *ngIf="emailAddress.touched && emailAddress.invalid"
+            class="email-validation"
+          >
+            <i class="fas fa-solid fa-circle-xmark"></i> Invalid Email
+          </div>
+        </div>
+        <label
+          for="input"
+          class="floating-label"
+          for="email"
+          [ngClass]="{ 'label-valid': emailAddress.valid }"
+          >Email address</label
+        >
+      </div>
+
+      <button
+        type="submit"
+        title="email button"
+        class="newsletter-button button"
+      >
+        Get Started
+        <i class="fas fa-solid fa-chevron-right"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+<div class="border"></div>
+
+<section class="watch xl-max-width">
+  <div class="watch__typography center">
+    <h2>Enjoy on your TV</h2>
+    <p>
+      Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-rays
+      players, and more
+    </p>
+  </div>
+
+  <div class="watch__figure">
+    <figure class="w-figure-container">
+      <img
+        src="../../../assets/tv640x480.png"
+        alt="TV"
+        title="TV"
+        width="640"
+        height="480"
+        loading="lazy"
+      />
+      <figcaption class="offscreen">A TV</figcaption>
+
+      <div class="video-container">
+        <video autoplay="" loop="">
+          <source
+            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+          />
+        </video>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<div class="border"></div>
+
+<section class="download xl-max-width">
+  <div class="download__typography center">
+    <h2>Download your shows to watch offline</h2>
+    <p>Save your favorites easily and always have something to watch</p>
+  </div>
+
+  <div class="download__figure">
+    <figure class="d-figure-container">
+      <img
+        src="../../../assets/netflix-phone640x480.jpg"
+        alt="Netflix"
+        title="Netflix Phone"
+        height="480"
+        width="640"
+        loading="lazy"
+      />
+      <figcaption class="offscreen">A Netflix Phone</figcaption>
+
+      <div class="d-figure-bottom">
+        <img
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+          alt=""
+          loading="lazy"
+        />
+
+        <div>
+          <p>Stranger Things</p>
+          <p>Downloading...</p>
+        </div>
+
+        <img
+          src="../../../assets/download_icon100x100.gif"
+          alt=""
+          height="100"
+          width="100"
+          class="d-figure-bottom-gif"
+          loading="lazy"
+        />
+      </div>
+    </figure>
+  </div>
+</section>
+
+<div class="border"></div>
+
+<section class="watch-second">
+  <div class="ws__typography center">
+    <h2>Watch everywhere</h2>
+    <p>
+      Stream unlimited movies and TV shows on your phone, tablet,laptop, and TV.
+    </p>
+  </div>
+</section>
+
+<div class="border"></div>
+
+<section class="create">
+  <div class="create__typography center">
+    <h2>Create profiles for kids</h2>
+    <p>
+      Send kids on adventures with their favorite characters in a space made
+      just for them--free with your membership
+    </p>
+  </div>
+
+  <figure class="create__figure">
+    <img
+      src="../../../assets/create640x480.png"
+      alt="Create Profile"
+      title="Create profile for kids"
+      height="480"
+      width="640"
+      loading="lazy"
+    />
+    <figcaption class="offscreen">Create profile for kids</figcaption>
+  </figure>
+</section>
+
+<div class="border"></div>
+
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <section
+    class="faq__question-container"
+    *ngFor="let faq of faqsData; let i = index"
+  >
+    <section>
+      <div (click)="showAns(i)" class="main-question">
+        <p>{{ faq.question }}</p>
+
+        <div
+          class="close-btn"
+          [ngClass]="{ 'open-btn': showAnswer && currentAns == i }"
+        ></div>
+      </div>
+
+      <div class="main-ans" *ngIf="showAnswer && currentAns == i">
+        <p>
+          {{ faq.answer1 }}
+        </p>
+        <br *ngIf="faq.answer2" />
+        <br *ngIf="faq.answer2" />
+        <p>{{ faq.answer2 }}</p>
+      </div>
+    </section>
+  </section>
+
+  <section class="faq__newsletter">
+    <p class="center">
+      Ready to watch? Enter your email to create or restart your membership.
+    </p>
+
+    <form #e="ngForm" action="" class="hero__newsletter">
+      <div class="input-container">
+        <input
+          type="email"
+          title="email"
+          class="general-input"
+          name="emailAddress"
+          ngModel
+          #emailAddress="ngModel"
+          required
+          [ngClass]="{
+            'email-invalid': emailAddress.touched && emailAddress.invalid
+          }"
+        />
+        <!-- VALIDATION -->
+        <div *ngIf="emailAddress.errors?.required">
+          <div
+            *ngIf="emailAddress.touched && emailAddress.invalid"
+            class="email-validation"
+          >
+            <i class="fas fa-solid fa-circle-xmark"></i> Invalid Email
+          </div>
+        </div>
+        <label
+          for="input"
+          class="floating-label"
+          for="email"
+          [ngClass]="{ 'label-valid': emailAddress.valid }"
+          >Email address</label
+        >
+      </div>
+
+      <button
+        type="submit"
+        title="email button"
+        class="newsletter-button button"
+      >
+        Get Started
+        <i class="fas fa-solid fa-chevron-right"></i>
+      </button>
+    </form>
+  </section>
+</section>
+
+<div class="border"></div>

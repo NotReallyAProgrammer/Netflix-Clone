@@ -1,0 +1,92 @@
+.fourfour-header {
+  margin-left: 45px;
+  margin-block: 20px;
+}
+.fourfour-header a {
+  background-image: url(https://assets.nflxext.com/en_us/home/logo_v7.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  font-size: 0;
+  height: 25px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 93px;
+}
+
+.fourfour {
+  background-image: url(https://assets.nflxext.com/ffe/siteui/pages/errors/bg-lost-in-space.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100svh;
+  display: flex;
+}
+
+.fourfour-container {
+  margin-inline: auto;
+  margin-top: 10%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+
+  padding-inline: 10%;
+  flex: 1;
+  max-height: 500px;
+  justify-content: space-between;
+}
+
+.fourfour__top {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fourfour-container h1 {
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
+}
+
+.fourfour-container p {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+}
+
+.fourfour-button {
+  align-self: center;
+  font-weight: 500;
+  font-size: 1rem;
+
+  padding: 20px;
+}
+
+.fourfour__bottom {
+  border-left: 2px solid var(--MAIN-COLOR);
+  width: fit-content;
+  margin-inline: auto;
+  padding: 5px;
+}
+.fourfour__bottom p {
+  font-weight: 300;
+}
+.fourfour__bottom span {
+  font-weight: 600;
+}
+
+.fourfour-container::after {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.2) 45%,
+    rgba(0, 0, 0, 0.1) 55%,
+    transparent 70%
+  );
+  bottom: -10vw;
+  content: "";
+  left: 10vw;
+  position: absolute;
+  right: 10vw;
+  top: -10vw;
+  z-index: -1;
+}

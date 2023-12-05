@@ -1,0 +1,41 @@
+.header {
+  margin-inline: auto;
+  padding-inline: var(--PADDING-INLINE);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: 89px;
+  height: 25px;
+}
+
+.header__logo svg {
+  width: 100%;
+  height: auto;
+}
+
+.header__right {
+  display: flex;
+
+  gap: 10px;
+}
+
+.right-select {
+  border: 1px solid gray;
+  padding: 8px 36px;
+
+  background-color: var(--BODY-BG-COLOR);
+  color: var(--FONT-COLOR);
+  border-radius: 4px;
+  font-weight: 14px;
+}
+
+@media screen and (min-width: 960px) {
+  .header__logo {
+    width: 148px;
+    height: 40px;
+  }
+}

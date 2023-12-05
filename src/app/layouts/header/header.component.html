@@ -1,0 +1,52 @@
+<header class="header xl-max-width">
+  <i class="header__logo">
+    <svg
+      width="149"
+      height="41"
+      viewBox="0 0 149 41"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_2_495)">
+        <path
+          d="M140.912 19.9566L148.828 40.9158C146.494 40.5821 144.163 40.1647 141.787 39.7898L137.328 28.2073L132.745 38.8325C130.496 38.4576 128.286 38.3313 126.036 38.0402L134.078 19.7067L126.786 0.915771H133.537L137.62 11.4147L141.995 0.915771H148.828L140.912 19.9566ZM121.454 0.915771H115.329V37.2491C117.328 37.374 119.412 37.4565 121.454 37.7065V0.915771ZM110.036 36.8317C104.454 36.4567 98.8699 36.1243 93.1624 35.9981V0.915771H99.411V30.0819C102.995 30.1656 106.578 30.4568 110.036 30.623V36.8317ZM86.4951 15.1239V21.3738H77.9545V35.5819H71.7871V0.915771H89.287V7.16565H77.9545V15.1239H86.4951ZM61.2869 7.16565V35.9156C59.2036 35.9156 57.0791 35.9156 55.037 35.9981V7.16565H48.5784V0.915771H67.7867V7.16565H61.2869ZM41.8286 21.7062C39.0792 21.7062 35.8287 21.7062 33.4955 21.8324V31.1242C37.1622 30.873 40.8289 30.5818 44.5368 30.4568V36.4567L27.2456 37.8327V0.915771H44.5368V7.16565H33.4955V15.5813C35.9124 15.5813 39.6204 15.4563 41.8286 15.4563V21.7062ZM7.20371 18.207V40.0397C4.95421 40.2909 2.95339 40.5821 0.828857 40.9158V0.915771H6.78755L14.912 23.6246V0.915771H21.1619V38.3313C18.9536 38.7075 16.7041 38.8325 14.3284 39.1649L7.20371 18.207Z"
+          fill="#E50914"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_2_495">
+          <rect
+            width="148"
+            height="40"
+            fill="white"
+            transform="translate(0.828857 0.915771)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+
+  <h6>Comeback on languges later</h6>
+  <section class="header__right">
+    <select
+      name="language"
+      id="language"
+      title="select language"
+      class="select-languages"
+    >
+      <option selected="" value="English">English</option>
+      <option value="Filipino">Filipino</option>
+    </select>
+
+    <button
+      [routerLinkActive]="['log-in']"
+      [routerLink]="['log-in']"
+      type="submit"
+      name="Sign In"
+      title="Sign in"
+      class="button"
+    >
+      Sign In
+    </button>
+  </section>
+</header>
