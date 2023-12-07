@@ -64,6 +64,7 @@
 .fourfour__bottom {
   border-left: 2px solid var(--MAIN-COLOR);
   width: fit-content;
+  width: -moz-fit-content;
   margin-inline: auto;
   padding: 5px;
 }
